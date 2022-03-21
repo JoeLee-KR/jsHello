@@ -1,16 +1,25 @@
-var sayNode = function() {
-    console.log('Node');
-};
+var relationship1 = {
+    name: 'Zero',
+    friends: ['Nero', 'Hero', 'Xero'],
+    logfriends: function() {
+        var that = this;
+        this.friends.forEach( function(myfuncname) {
+            console.log(that.name, myfuncname);
+        })
+    }
+}
+relationship1.logfriends();
 
-var es = 'ES';
-var newObj = {
-    sayJs() {
-        console.log('JS');
-    },
-    sayNode,
-    [es+6]: 'FantasticNew',
-};
+console.log("---");
 
-newObj.sayNode();
-newObj.sayJs();
-console.log(newObj.ES6);
+var relationship2 = {
+    name: 'Kero',
+    friends: ['Nero', 'Hero', 'Xero'],
+    logfriends: function() {
+        //var that = this;
+        this.friends.forEach( myfuncname => {
+            console.log(this.name, myfuncname);
+        })
+    }
+}
+relationship2.logfriends();
